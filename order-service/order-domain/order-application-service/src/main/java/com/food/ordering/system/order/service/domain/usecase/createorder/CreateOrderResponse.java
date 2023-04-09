@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 
-import java.util.Optional;
 import java.util.UUID;
 
 @Builder
@@ -14,7 +13,7 @@ import java.util.UUID;
 @Getter
 public class CreateOrderResponse {
     @NotNull
-    private UUID orderId;
+    private UUID orderTrackingId;
 
     @NotNull
     private OrderStatus orderStatus;

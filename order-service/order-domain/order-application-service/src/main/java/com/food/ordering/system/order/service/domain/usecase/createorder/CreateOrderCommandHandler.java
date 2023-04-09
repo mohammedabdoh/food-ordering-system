@@ -29,6 +29,9 @@ public class CreateOrderCommandHandler implements CommandHandlerInterface<Create
     public CreateOrderResponse handle(CreateOrderCommand command) {
         OrderCreatedEvent orderCreatedEvent = createOrderHelper.persistOrder(command);
         messagePublisher.publish(orderCreatedEvent);
-        return orderDataMapper.createOrderResponseFromOrderInstance(orderCreatedEvent.getEntity());
+        return orderDataMapper.createOrderResponseFromOrderInstance(
+                orderCreatedEvent.getEntity(),
+                "Order created successfully"
+        );
     }
 }

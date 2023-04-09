@@ -21,7 +21,7 @@ public class OrderDataMapper {
         return Restaurant.builder()
                 .restaurantId(new RestaurantId(createOrderCommand.getRestaurantId()))
                 .products(
-                        createOrderCommand.getOrderItems().stream().map(orderItem -> new Product(new ProductId(orderItem.productId()))).collect(Collectors.toList())
+                        createOrderCommand.getOrderItems().stream().map(orderItem -> new Product(new ProductId(orderItem.getProductId()))).collect(Collectors.toList())
                 ).build();
     }
 
@@ -35,10 +35,11 @@ public class OrderDataMapper {
                 .build();
     }
 
-    public CreateOrderResponse createOrderResponseFromOrderInstance(Order order) {
+    public CreateOrderResponse createOrderResponseFromOrderInstance(Order order, String message) {
         return CreateOrderResponse.builder()
-                .orderId(order.getId().getValue())
+                .orderTrackingId(order.getId().getValue())
                 .orderStatus(order.getOrderStatus())
+                .message(message)
                 .build();
     }
 
@@ -53,19 +54,19 @@ public class OrderDataMapper {
     private static StreetAddress getStreetAddress(CreateOrderCommand createOrderCommand) {
         return new StreetAddress(
                 UUID.randomUUID(),
-                createOrderCommand.getOrderAddress().street(),
-                createOrderCommand.getOrderAddress().postalCode(),
-                createOrderCommand.getOrderAddress().city()
+                createOrderCommand.getOrderAddress().getStreet(),
+                createOrderCommand.getOrderAddress().getPostalCode(),
+                createOrderCommand.getOrderAddress().getCity()
         );
     }
 
     private static List<OrderItem> getOrderItems(CreateOrderCommand createOrderCommand) {
         return createOrderCommand.getOrderItems().stream().map(orderItem ->
                 OrderItem.builder()
-                        .product(new Product(new ProductId(orderItem.productId())))
-                        .price(new Money(orderItem.price()))
-                        .quantity(orderItem.quantity())
-                        .subTotal(new Money(orderItem.subTotal()))
+                        .product(new Product(new ProductId(orderItem.getProductId())))
+                        .price(new Money(orderItem.getPrice()))
+                        .quantity(orderItem.getQuantity())
+                        .subTotal(new Money(orderItem.getSubTotal()))
                         .build()
         ).collect(Collectors.toList());
     }
