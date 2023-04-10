@@ -15,3 +15,11 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+docker-compose/volumes/kafka/broker-1/
+docker-compose/volumes/kafka/broker-2/
+docker-compose/volumes/kafka/broker-3/
+docker-compose/volumes/zookeeper/data/
+docker-compose/volumes/zookeeper/transactions/
+
+.DS_Store
