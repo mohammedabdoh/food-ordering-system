@@ -25,6 +25,9 @@
     <properties>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <mockito.version>4.5.1</mockito.version>
+        <spring-kafka.version>3.0.4</spring-kafka.version>
+        <kafka-avro-serializer.version>7.3.3</kafka-avro-serializer.version>
+        <avro.version>1.11.1</avro.version>
     </properties>
 
     <dependencyManagement>
@@ -57,6 +60,26 @@
             <dependency>
                 <groupId>com.food.ordering.system</groupId>
                 <artifactId>common-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.food.ordering.system</groupId>
+                <artifactId>producer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.food.ordering.system</groupId>
+                <artifactId>consumer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.food.ordering.system</groupId>
+                <artifactId>model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.food.ordering.system</groupId>
+                <artifactId>config-data</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
