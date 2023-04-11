@@ -15,7 +15,6 @@ import com.food.ordering.system.order.service.domain.usecase.createorder.CreateO
 import com.food.ordering.system.order.service.domain.usecase.createorder.CreateOrderResponse;
 import com.food.ordering.system.order.service.domain.usecase.createorder.OrderAddress;
 import com.food.ordering.system.order.service.domain.usecase.createorder.OrderItem;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
