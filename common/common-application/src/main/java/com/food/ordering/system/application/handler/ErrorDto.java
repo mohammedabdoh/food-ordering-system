@@ -5,5 +5,7 @@ import lombok.Builder;
 
 @Builder
 @AllArgsConstructor
-public record ErrorDto(String message, String code) {
+public class ErrorDto {
+    private String message;
+    private String code;
 }
