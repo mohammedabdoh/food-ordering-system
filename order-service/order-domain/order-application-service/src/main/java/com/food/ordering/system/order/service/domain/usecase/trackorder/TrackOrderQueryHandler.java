@@ -2,7 +2,7 @@ package com.food.ordering.system.order.service.domain.usecase.trackorder;
 
 import com.food.ordering.system.application.ports.input.query.QueryHandlerInterface;
 import com.food.ordering.system.order.service.domain.entity.Order;
-import com.food.ordering.system.order.service.domain.exception.OrderDomainException;
+import com.food.ordering.system.order.service.domain.exception.OrderNotFoundException;
 import com.food.ordering.system.order.service.domain.mapper.OrderDataMapper;
 import com.food.ordering.system.order.service.domain.ports.output.repository.OrderRepositoryInterface;
 import com.food.ordering.system.order.service.domain.valueobject.TrackingId;
@@ -31,7 +31,7 @@ public class TrackOrderQueryHandler implements QueryHandlerInterface<TrackOrderR
         if(order.isEmpty()) {
             String message = "Order %s not found";
             log.error(message);
-            throw new OrderDomainException(message);
+            throw new OrderNotFoundException(message);
         }
 
         return orderDataMapper.createTrackOrderResponseFromOrderInstance(order.get());
