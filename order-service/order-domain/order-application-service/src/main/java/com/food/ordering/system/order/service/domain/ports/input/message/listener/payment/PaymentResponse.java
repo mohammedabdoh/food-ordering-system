@@ -1,20 +1,25 @@
 package com.food.ordering.system.order.service.domain.ports.input.message.listener.payment;
 
 import com.food.ordering.system.domain.valueobject.PaymentStatus;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.List;
 
-public record PaymentResponse(
-        String id,
-        String sageId,
-        String orderId,
-        String paymentId,
-        String customerId,
-        BigDecimal price,
-        Instant createdAt,
-        PaymentStatus paymentStatus,
-        List<String> failureMessages
-) {
+@Builder
+@AllArgsConstructor
+@Getter
+public class PaymentResponse {
+    private String id;
+    private String sageId;
+    private String orderId;
+    private String paymentId;
+    private String customerId;
+    private BigDecimal price;
+    private Instant createdAt;
+    private PaymentStatus paymentStatus;
+    private List<String> failureMessages;
 }

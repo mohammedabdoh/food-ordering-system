@@ -1,17 +1,22 @@
 package com.food.ordering.system.order.service.domain.ports.input.message.listener.restaurant;
 
 import com.food.ordering.system.domain.valueobject.OrderApprovalStatus;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 
 import java.time.Instant;
 import java.util.List;
 
-public record RestaurantApprovalResponse(
-        String id,
-        String sagaId,
-        String orderId,
-        String restaurantId,
-        Instant createdAt,
-        OrderApprovalStatus orderApprovalStatus,
-        List<String> failureMessages
-) {
+@Builder
+@AllArgsConstructor
+@Getter
+public class RestaurantApprovalResponse {
+    private String id;
+    private String sagaId;
+    private String orderId;
+    private String restaurantId;
+    private Instant createdAt;
+    private OrderApprovalStatus orderApprovalStatus;
+    private List<String> failureMessages;
 }
