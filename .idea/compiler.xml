@@ -8,17 +8,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common-application" />
-        <module name="order-messaging" />
+        <module name="customer-service" />
         <module name="order-application-service" />
+        <module name="order-data-access" />
+        <module name="order-container" />
+        <module name="order-messaging" />
         <module name="config-data" />
         <module name="common-domain" />
         <module name="order-application" />
         <module name="producer" />
         <module name="model" />
-        <module name="order-data-access" />
         <module name="order-domain-core" />
         <module name="consumer" />
-        <module name="order-container" />
       </profile>
     </annotationProcessing>
   </component>
@@ -29,6 +30,7 @@
       <module name="common-domain" options="-parameters" />
       <module name="config-data" options="-parameters" />
       <module name="consumer" options="-parameters" />
+      <module name="customer-service" options="-parameters" />
       <module name="food-ordering-system" options="-parameters" />
       <module name="infrastructure" options="-parameters" />
       <module name="kafka" options="-parameters" />

@@ -28,7 +28,8 @@ spring:
     init:
       platform: postgres
       mode: always
-      schema-locations: classpath:init-schema.sql
+      schema-locations: classpath:*-schema.sql
+      data-locations: classpath:*-data.sql
 
 kafka-config:
   bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
