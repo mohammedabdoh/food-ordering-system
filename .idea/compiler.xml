@@ -10,15 +10,21 @@
         <module name="common-application" />
         <module name="customer-service" />
         <module name="order-application-service" />
+        <module name="payment-messaging" />
         <module name="order-data-access" />
+        <module name="payment-dataaccess" />
         <module name="order-container" />
+        <module name="payment-domain" />
         <module name="order-messaging" />
+        <module name="payment-application-service" />
         <module name="config-data" />
+        <module name="payment-container" />
         <module name="common-domain" />
         <module name="order-application" />
         <module name="producer" />
         <module name="model" />
         <module name="order-domain-core" />
+        <module name="payment-domain-core" />
         <module name="consumer" />
       </profile>
     </annotationProcessing>
@@ -43,6 +49,13 @@
       <module name="order-domain-core" options="-parameters" />
       <module name="order-messaging" options="-parameters" />
       <module name="order-service" options="-parameters" />
+      <module name="payment-application-service" options="-parameters" />
+      <module name="payment-container" options="-parameters" />
+      <module name="payment-dataaccess" options="-parameters" />
+      <module name="payment-domain" options="-parameters" />
+      <module name="payment-domain-core" options="-parameters" />
+      <module name="payment-messaging" options="-parameters" />
+      <module name="payment-service" options="-parameters" />
       <module name="producer" options="-parameters" />
     </option>
   </component>
