@@ -8,10 +8,8 @@ import com.food.ordering.system.payment.service.domain.event.PaymentCancelledEve
 import com.food.ordering.system.payment.service.domain.event.PaymentCompletedEvent;
 import com.food.ordering.system.payment.service.domain.event.PaymentEvent;
 import com.food.ordering.system.payment.service.domain.event.PaymentFailedEvent;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-@Slf4j
 @Service
 public class PaymentRequestMessageListener implements PaymentRequestMessageListenerInterface {
     private final PaymentRequestMessageListenerHelper paymentRequestMessageListenerHelper;

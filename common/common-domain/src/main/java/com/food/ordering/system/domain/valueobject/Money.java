@@ -26,9 +26,9 @@ public class Money {
     }
 
     public Money add(Money money) {
-        BigDecimal newAmount = setScale(this.amount.subtract(money.getAmount()));
+        BigDecimal newAmount = setScale(this.amount.add(money.getAmount()));
 
-        return new Money(setScale(this.amount.add(money.getAmount())));
+        return new Money(newAmount);
     }
 
     public Money subtract(Money money) {

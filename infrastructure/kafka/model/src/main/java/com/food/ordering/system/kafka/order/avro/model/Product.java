@@ -5,15 +5,13 @@
  */
 package com.food.ordering.system.kafka.order.avro.model;
 
-import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
-import org.apache.avro.util.Utf8;
 import org.apache.avro.message.BinaryMessageEncoder;
 import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class Product extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+public class Product extends org.apache.avro.specific.SpecificRecordBase {
   private static final long serialVersionUID = -6511580554663840009L;
 
 
@@ -111,7 +109,6 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
 
   // Used by DatumReader.  Applications should not call.
   @Override
-  @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: id = value$ != null ? value$.toString() : null; break;
@@ -192,8 +189,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
    * RecordBuilder for Product instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Product>
-    implements org.apache.avro.data.RecordBuilder<Product> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Product> {
 
     private java.lang.String id;
     private int quantity;
@@ -315,7 +311,6 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
     }
 
     @Override
-    @SuppressWarnings("unchecked")
     public Product build() {
       try {
         Product record = new Product();

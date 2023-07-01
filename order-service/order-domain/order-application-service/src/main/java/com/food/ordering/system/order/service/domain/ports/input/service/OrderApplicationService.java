@@ -8,11 +8,9 @@ import com.food.ordering.system.order.service.domain.usecase.createorder.CreateO
 import com.food.ordering.system.order.service.domain.usecase.trackorder.TrackOrderQuery;
 import com.food.ordering.system.order.service.domain.usecase.trackorder.TrackOrderQueryHandler;
 import com.food.ordering.system.order.service.domain.usecase.trackorder.TrackOrderResponse;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
-@Slf4j
 @Validated
 @Service
 class OrderApplicationService implements OrderApplicationServiceInterface {

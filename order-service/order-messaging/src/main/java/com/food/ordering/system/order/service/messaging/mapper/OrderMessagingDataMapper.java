@@ -11,7 +11,6 @@ import com.food.ordering.system.order.service.domain.ports.input.message.listene
 import com.food.ordering.system.order.service.domain.ports.input.message.listener.restaurant.RestaurantApprovalResponse;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.UUID;
 import java.util.stream.Collectors;
 

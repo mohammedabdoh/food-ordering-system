@@ -5,15 +5,13 @@
  */
 package com.food.ordering.system.kafka.order.avro.model;
 
-import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
-import org.apache.avro.util.Utf8;
 import org.apache.avro.message.BinaryMessageEncoder;
 import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class RestaurantApprovalRequestAvroModel extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+public class RestaurantApprovalRequestAvroModel extends org.apache.avro.specific.SpecificRecordBase {
   private static final long serialVersionUID = -3917361261016430486L;
 
 
@@ -347,8 +345,7 @@ public class RestaurantApprovalRequestAvroModel extends org.apache.avro.specific
    * RecordBuilder for RestaurantApprovalRequestAvroModel instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<RestaurantApprovalRequestAvroModel>
-    implements org.apache.avro.data.RecordBuilder<RestaurantApprovalRequestAvroModel> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<RestaurantApprovalRequestAvroModel> {
 
     private java.util.UUID id;
     private java.util.UUID sagaId;
